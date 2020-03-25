@@ -5,4 +5,4 @@ docker build --no-cache -t natix-io/usage-anomaly-dashboard:v1 -f ./usage-anomal
 iofogctl deploy -f quick-start.yaml 
 echo "waiting for iofog agent ..."
 sleep 10
-iofogctl deploy -f config.yaml
+iofogctl deploy application -f config.yaml
