@@ -21,19 +21,15 @@ export default {
     mounted(){      
               var elems = document.querySelectorAll('.dropdown-trigger');
               M.Dropdown.init(elems, null);
-             
-              //this.message.contentdata = JSON.parse(this.message.contentdata.toString('utf-8'));
-              //if (this.selectedDevice === this.message.tag){
-                 //this.$emit("SelectedDeviceUpdated",this.message.tag,this.message.contentdata.usage_data,this.message.contentdata.anomaly_value,this.message.contentdata.anomaly_step);
-                
-              //}
+              console.log('address is in next line');
+              console.log(process.env.VUE_APP_ANOMALY_REPORT_API);
             },
     methods: {
         pickDevice(name) {
             window.JQuery('#edge-device-select-dropdown').html(''+name);
                 const options = {
                   method: 'get',
-                  url: process.env['ANOMALY_REPORT_API'],
+                  url: process.env.VUE_APP_ANOMALY_REPORT_API,
                   headers: {'Content-Type':'application/json'},
                   transformResponse: [(data) => {     return JSON.parse(data); }]
                 }; 
