@@ -1,0 +1,19 @@
+{
+  "name": "edge-device",
+  "version": "1.0.0",
+  "description": "represents a device on iofog",
+  "main": "index.js",
+  "dependencies": {
+    "@iofog/nodejs-sdk": "^1.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "iofog",
+    "edge-device"
+  ],
+  "author": "rouzbeh karimi",
+  "license": "ISC"
+}

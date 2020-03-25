@@ -1,0 +1,28 @@
+---
+apiVersion: iofog.org/v1
+kind: ControlPlane
+metadata:
+  name: ecn
+spec:
+  iofogUser:
+    name: Quick
+    surname: Start
+    email: user@domain.com
+    password: q1u45ic9kst563art
+  controllers:
+  - name: local-controller
+    host: localhost
+---
+apiVersion: iofog.org/v1
+kind: Connector
+metadata:
+  name: local-connector
+spec:
+  host: localhost
+---
+apiVersion: iofog.org/v1
+kind: Agent
+metadata:
+  name: local-agent
+spec:
+  host: localhost

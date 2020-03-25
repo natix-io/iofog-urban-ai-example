@@ -1,0 +1,159 @@
+.sidenav li {
+  width:100%;
+}
+body {
+	background-color: #272442;
+}
+.sidenav {
+	background-color: #312e52;
+}
+.sidenav li  > a {
+    color: #d2e6ec;
+    text-align: left;
+}
+.sidenav >  li.active  {
+    background-color: #ee6e73;
+    border-radius: 50px 0px 0px 50px;
+    margin-left: 50px;
+}
+.sidenav >  li.active > a {
+    color: #ffffff;
+}
+
+
+#chartdiv {
+  }
+  a:link {
+    text-decoration: none;
+    color: black;
+  }
+  
+  a:visited {
+    text-decoration: none;
+    color: black;
+  }
+  
+  a:hover {
+    text-decoration: none;
+    color: black;
+  }
+  
+  a:active {
+    text-decoration: none;
+    color: black;
+  }
+
+
+  #triangle-topright-alert {
+
+    float:right;
+     top:0px;
+    width: 0px;
+     height: 0px;
+     border-top: 100px solid #e79a5a;
+     border-left: 100px solid transparent;
+     z-index: 1;
+    }
+    
+    #triangle-topright-danger {
+    
+    float:right;
+     top:0px;
+    width: 0px;
+     height: 0px;
+     border-top: 100px solid #c76063;
+     border-left: 100px solid transparent;
+     z-index: 1;
+    }
+    
+    #triangle-topright-ok {
+    
+    float:right;
+     top:0px;
+    width: 0px;
+     height: 0px;
+     border-top: 100px solid #5ed8bc;
+     border-left: 100px solid transparent;
+     z-index: 1;
+    }
+
+    .ct-chart {
+      
+      height: 300px;
+    }
+
+    .ct-chart .ct-legend {
+      position: relative;
+      z-index: 10;
+      list-style: none;
+      text-align: center;
+    }
+    .ct-chart .ct-legend li {
+      position: relative;
+      padding-left: 23px;
+      margin-right: 10px;
+      margin-bottom: 3px;
+      cursor: pointer;
+      display: inline-block;
+    }
+    .ct-chart .ct-legend li:before {
+      width: 12px;
+      height: 12px;
+      position: absolute;
+      left: 0;
+      content: '';
+      border: 3px solid transparent;
+      border-radius: 2px;
+    }
+    .ct-chart .ct-legend li .inactive:before {
+      background: transparent;
+    }
+    .ct-chart .ct-legend li:nth-child(1)::before {
+      background-color: rgb(255, 128, 0,0.5);
+    }
+    .ct-chart .ct-legend li:nth-child(2)::before {
+      background-color: rgb(0, 128, 255,0.5);
+    }
+    .ct-chart .ct-legend li:nth-child(3)::before {
+      background-color: rgb(128, 0, 255,0.5);
+    }
+    .ct-chart .ct-legend li:nth-child(1n+4)::before {
+      background-color: rgb(255, 0, 0,0.5);
+     }
+
+    .ct-chart .ct-legend .ct-legend-inside {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+.ct-chart g:not(.ct-grids):not(.ct-labels) g:nth-child(1) .ct-area {
+    fill: rgb(255, 128, 0,0.5);
+}
+
+.ct-chart g:not(.ct-grids):not(.ct-labels) g:nth-child(2) .ct-area {
+    fill: rgb(0, 128, 255,0.5);
+}
+
+.ct-chart g:not(.ct-grids):not(.ct-labels) g:nth-child(3) .ct-area {
+    fill: rgb(128, 0, 255,0.5);
+}
+
+.ct-chart g:not(.ct-grids):not(.ct-labels)  g:nth-child(1n+4)  .ct-area {
+    fill: rgb(255, 0, 0,0.5);
+}
+    .ct-chart g:not(.ct-grids):not(.ct-labels) g:nth-child(1) .ct-point,
+    .ct-chart g:not(.ct-grids):not(.ct-labels) g:nth-child(1) .ct-line {
+      stroke: 	rgb(255, 128, 0,0.5);
+    }
+    .ct-chart g:not(.ct-grids):not(.ct-labels) g:nth-child(2) .ct-point,
+    .ct-chart g:not(.ct-grids):not(.ct-labels) g:nth-child(2) .ct-line {
+      stroke: rgb(0, 128, 255,0.5);
+    }
+    .ct-chart g:not(.ct-grids):not(.ct-labels) g:nth-child(3) .ct-point,
+    .ct-chart g:not(.ct-grids):not(.ct-labels) g:nth-child(3) .ct-line {
+      stroke: rgb(128, 0, 255,0.5);
+    }
+    .ct-chart g:not(.ct-grids):not(.ct-labels) g:nth-child(1n+4) .ct-point,
+    .ct-chart g:not(.ct-grids):not(.ct-labels) g:nth-child(1n+4) .ct-line {
+      stroke: rgb(255, 0, 0,0.5);
+    }

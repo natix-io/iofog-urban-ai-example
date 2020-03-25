@@ -1,0 +1,51 @@
+---
+apiVersion: iofog.org/v1
+kind: Application
+metadata:
+  name: natix-io
+spec:
+  microservices:
+   - name: Usage Anomaly Detector
+     agent:
+       name: local-agent
+     config:
+      tag: 'usage-anomaly-detector'
+     images:
+       x86: natix-io/usage-anomaly-detector:v1
+       registry: local
+     volumes: []
+     ports: 
+      - external: 7778
+        internal: 5000
+     env: []
+   - name: Edge Device Cam1
+     agent:
+       name: local-agent
+     config:
+      tag: 'cam1'
+      minUsage: 40
+      maxUsage: 50
+     images:
+       x86: natix-io/edge-device:v1
+       registry: local
+     volumes: []
+     ports: []
+     env: []
+   - name: Edge Device Cam2
+     agent:
+       name: local-agent
+     config:
+      tag: 'cam2'
+      minUsage: 20
+      maxUsage: 25
+     images:
+       x86: natix-io/edge-device:v1
+       registry: local
+     volumes: []
+     ports: []
+     env: []          
+  routes:
+      - from: Edge Device Cam1
+        to: Usage Anomaly Detector
+      - from: Edge Device Cam2
+        to: Usage Anomaly Detector       
