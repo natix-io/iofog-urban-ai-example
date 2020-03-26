@@ -7,7 +7,7 @@ WORKDIR /src/iofog-python-sdk
 RUN python setup.py install
 RUN pip install numpy
 RUN pip install -U flask-cors
-COPY . /src
+COPY ./usage-anomaly-detector /src
 WORKDIR /src
 EXPOSE 5000
 

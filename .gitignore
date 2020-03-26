@@ -2,6 +2,7 @@
 node_modules
 edge-device/node_modules
 usage-anomaly-dashboard/node_modules
+usage-anomaly-dashboard/.env
 edge-device/dist
 usage-anomaly-dashboard/dist
 

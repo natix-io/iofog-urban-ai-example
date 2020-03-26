@@ -5,7 +5,6 @@
         <!-- Dropdown Structure -->
         <ul id='dropdown1' class='dropdown-content'>
             <li v-on:click="pickDevice('cam1')">cam1</li>
-            <li v-on:click="pickDevice('cam2')">cam2</li>
         </ul>
   </div>      
 </template>
